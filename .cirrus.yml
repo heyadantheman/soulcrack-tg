@@ -1,4 +1,11 @@
 task:
   name: force trigger
+
+  container:
+    image: ubuntu:22.04
+
   script:
     - echo "Hello from Cirrus"
+    - uname -a
+    - nproc
+    - free -h
